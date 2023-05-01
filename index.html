@@ -27,9 +27,9 @@
             "@context": "https://schema.org",
             "@type": "Electrician",
             "image": [
-                "http://suryaindomakmur.website/img/logo.png",
-                "http://suryaindomakmur.website/img/logo-gs.png",
-                "http://suryaindomakmur.website/img/long-logo-gs.png"
+                "https://suryaindomakmur.website/img/logo.png",
+                "https://suryaindomakmur.website/img/logo-gs.png",
+                "https://suryaindomakmur.website/img/long-logo-gs.png"
             ],
             "name": "Surya Indo Makmur",
             "address": {
@@ -39,7 +39,7 @@
                 "postalCode": "60252",
                 "addressCountry": "ID"
             },
-            "url": "http://suryaindomakmur.website/",
+            "url": "https://suryaindomakmur.website/",
             "telephone": "+6282170252366",
             "@id": "",
             "priceRange": "$",
@@ -57,7 +57,7 @@
                 "opens": "00:00",
                 "closes": "23:59"
             },
-            "sameAs": "http://suryaindomakmur.website/"
+            "sameAs": "https://suryaindomakmur.website/"
         }
     </script>
 
@@ -477,6 +477,25 @@
 
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            jQuery('a[href*="https://api.whatsapp.com/send?phone=6282170252366"]').click(function () {
+                function gtag_report_conversion(url) {
+                    var callback = function () {
+                        if (typeof (url) != 'undefined') {
+                            window.location = url;
+                        }
+                    };
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-10790623800/UHyFCO_WtZsYELi0r5ko',
+                        'event_callback': callback
+                    });
+                    return false;
+                }
+            })
+        });
+    </script>
 
     <!-- here goes GA etc -->
     <script type="text/javascript">
