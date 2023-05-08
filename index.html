@@ -90,24 +90,22 @@
 
 
 
-    <!-- Google Tag Manager -->
+    <!-- Google Ads -->
     <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-10790623800/f6xhCPTK_pwYELi0r5ko',
+                'event_callback': callback
             });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-59DDG38');
+            return false;
+        }
     </script>
-    <!-- End Google Tag Manager -->
+    <!-- End Google Ads -->
 
     <!-- Default CSS -->
     <style type="text/css">
@@ -443,9 +441,9 @@
                     <address class="footer__contact" data-inview="bottom">
                         <div class="footer__details-1">
                             <a href="https://api.whatsapp.com/send?phone=6282170252366" target="_blank"
-                                class="link">Whatsapp</a>
+                                class="link" onclick="gtag_report_conversion()">Whatsapp</a>
                             <a href="https://api.whatsapp.com/send?phone=6282170252366" target="_blank"
-                                class="link">+62-821-7025-2366</a>
+                                class="link" onclick="gtag_report_conversion()">+62-821-7025-2366</a>
                             <a href="mailto:makmur8@gmail.com" target="_blank" class="link">makmur8@gmail.com</a>
                         </div>
 
@@ -478,25 +476,6 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            jQuery('a[href*="https://api.whatsapp.com/send?phone=6282170252366"]').click(function () {
-                console.log("test");
-                function gtag_report_conversion(url) {
-                    var callback = function () {
-                        if (typeof (url) != 'undefined') {
-                            window.location = url;
-                        }
-                    };
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-10790623800/UHyFCO_WtZsYELi0r5ko',
-                        'event_callback': callback
-                    });
-                    return false;
-                }
-            })
-        });
-    </script>
 
     <!-- here goes GA etc -->
     <script type="text/javascript">
